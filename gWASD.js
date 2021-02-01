@@ -1,5 +1,5 @@
 
-window.onload = function () {
+window.onload = () => {
     
     document.getElementById("scale").value = 1;
     if (typeof(Storage) !== "undefined") {
@@ -16,7 +16,7 @@ window.onload = function () {
     } 
 }
 
-function save() {
+const save = () => {
     // Save code
     if (typeof (Storage) !== "undefined") {
         localStorage.gWASD = document.getElementById("source").value.trim();
@@ -27,14 +27,14 @@ function save() {
 }
 
 // Allows run() to run (used by the "Stop" button)
-var stopImageRender = true;
+let stopImageRender = true;
 
-function stopRender() {
+const stopRender = () => {
     stopImageRender = true;
 }
 
 // Used to only let run() have one instance
-var renderLock = false;
+let renderLock = false;
 
 async function startRender() {
     if (renderLock) {
@@ -69,14 +69,14 @@ const colors = [[0x00, 0x00, 0x00], // Black
                 [0xFF, 0xFF, 0xFF]];// White
 
 // Good resource: https://rembound.com/articles/drawing-pixels-with-html5-canvas-and-javascript
-function run() {
+const run = () => {
 
     // Get output location
-    var canvas = document.getElementById("viewport");
-    var source = document.getElementById("source").value.trim();
-    var context = canvas.getContext("2d");
+    let canvas = document.getElementById("viewport");
+    let source = document.getElementById("source").value.trim();
+    let context = canvas.getContext("2d");
 
-    var scale = parseInt(document.getElementById("scale").value);
+    let scale = parseInt(document.getElementById("scale").value);
 
     if (isNaN(scale)) {
         alert("Error! The scale was set to a non-integer or non-numeric value.");
@@ -86,8 +86,8 @@ function run() {
     console.log("Scale: " + scale);
 
     // Get image dimentions
-    var screenDelimiter = source.indexOf("x");
-    var index = source.search(/[wasdgbnp\(\)]/);
+    let screenDelimiter = source.indexOf("x");
+    let index = source.search(/[wasdgbnp\(\)]/);
     var width = parseInt(source.substr(0, screenDelimiter), 10);
     var height = parseInt(source.substr(screenDelimiter + 1, index - 1), 10);
 

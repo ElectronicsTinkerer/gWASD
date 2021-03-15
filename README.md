@@ -1,5 +1,5 @@
 # gWASD
-A simple joke language inspired by [WASD](https://esolangs.org/wiki/WASD) for graphical programming.
+A simple joke language for graphical programming inspired by [WASD](https://esolangs.org/wiki/WASD) and [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
 ## Live editor
 There is a live editor available [here](https://projects.zachspi.ddns.net/gWASD/gWASD.html)
@@ -28,6 +28,10 @@ There is a live editor available [here](https://projects.zachspi.ddns.net/gWASD/
 - The Go command takes an argument for how many characters it is supposed to back up (i.e. `g1` would loop back to itself while `g3` would execute the previous two commands in a loop).
 - Decisions: `b` takes similar syntax to the Go command. It branches (back) by a specified index delta if the current pixel is of value 0.
 - Comments are enclosed by `()` and comments may not contain parentheses.
+
+## Contributing
+I would like to keep the command set as-is, but if you want to improve the code or do some styling on the simulator page, send me a pull request and I'll look it over!\
+On a side note: I am thinking about writing an assembler that supports labels and takes "normal" looking assembly (so that might be an interesting thing to work on :).
 
 ## Examples
 ### Loop

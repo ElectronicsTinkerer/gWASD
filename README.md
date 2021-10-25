@@ -2,11 +2,7 @@
 A simple joke language for graphical programming inspired by [WASD](https://esolangs.org/wiki/WASD) and [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
 ## Live editor
-<<<<<<< Updated upstream
-There is a live editor available [here](https://projects.zachspi.ddns.net/gWASD/gWASD.html)
-=======
 There is a live editor available [here](https://projects.zrcn.org/gWASD/gWASD.html)
->>>>>>> Stashed changes
 
 ## Commands
 - `w` - Move pointer up one row
